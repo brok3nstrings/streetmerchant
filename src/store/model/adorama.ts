@@ -1,4 +1,4 @@
-import {Store} from './store';
+import { Store } from './store';
 
 export const Adorama: Store = {
   currency: '$',
@@ -124,6 +124,54 @@ export const Adorama: Store = {
       model: 'strix oc',
       series: '3090',
       url: 'https://www.adorama.com/asrx3090o24g.html',
+    },
+    {
+      brand: 'asus',
+      model: 'tuf',
+      series: '3060',
+      url: 'https://www.adorama.com/as90yv0gc0m0.html',
+    },
+    {
+      brand: 'evga',
+      model: 'xc',
+      series: '3060ti',
+      url: 'https://www.adorama.com/ev8gp53663.html',
+    },
+    {
+      brand: 'evga',
+      model: 'ftw3',
+      series: '3060ti',
+      url: 'https://www.adorama.com/ev8gp53667.html',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x trio',
+      series: '3060ti',
+      url: 'https://www.adorama.com/msig306tgxt.html',
+    },
+    {
+      brand: 'pny',
+      model: 'xlr8',
+      series: '3060ti',
+      url: 'https://www.adorama.com/pnvcg8dfxppb.html',
+    },
+    {
+      brand: 'msi',
+      model: 'gaming x trio',
+      series: '3070',
+      url: 'https://www.adorama.com/msig3070gxt.html',
+    },
+    {
+      brand: 'pny',
+      model: 'xlr8',
+      series: '3070',
+      url: 'https://www.adorama.com/png30708tfxb.html',
+    },
+    {
+      brand: 'msi',
+      model: 'suprim',
+      series: '3070',
+      url: 'https://www.adorama.com/msig3070sx8.html',
     },
   ],
   name: 'adorama',
