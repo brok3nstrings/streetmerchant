@@ -133,7 +133,7 @@ export const Adorama: Store = {
     },
     {
       brand: 'evga',
-      model: 'xc',
+      model: 'xc gaming',
       series: '3060ti',
       url: 'https://www.adorama.com/ev8gp53663.html',
     },
@@ -151,7 +151,7 @@ export const Adorama: Store = {
     },
     {
       brand: 'pny',
-      model: 'xlr8',
+      model: 'xlr8 revel',
       series: '3060ti',
       url: 'https://www.adorama.com/pnvcg8dfxppb.html',
     },
@@ -163,7 +163,7 @@ export const Adorama: Store = {
     },
     {
       brand: 'pny',
-      model: 'xlr8',
+      model: 'xlr8 revel',
       series: '3070',
       url: 'https://www.adorama.com/png30708tfxb.html',
     },
