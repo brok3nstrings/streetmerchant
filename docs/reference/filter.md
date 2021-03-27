@@ -18,8 +18,8 @@
 | `MAX_PRICE_SERIES_RX6900XT` | Maximum price allowed for a match, applies AMD RX 6900 XT |
 | `MAX_PRICE_SERIES_SONYPS5C` | Maximum price allowed for a match, applies PS5 console |
 | `MAX_PRICE_SERIES_SONYPS5DE` | Maximum price allowed for a match, applies PS5 digital edition |
-| `MAX_PRICE_SERIES_XBOXSS` | Maximum price allowed for a match, applies PS5 digital edition |
-| `MAX_PRICE_SERIES_XBOXSX` | Maximum price allowed for a match, applies PS5 digital edition |
+| `MAX_PRICE_SERIES_XBOXSS` | Maximum price allowed for a match, applies Xbox Series S |
+| `MAX_PRICE_SERIES_XBOXSX` | Maximum price allowed for a match, applies Xbox Series X |
 | `MAX_PRICE_SERIES_TEST` | Maximum price allowed for a match, applies `test:series` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location(s) to search. Comma separated, e.g.: `marietta,duluth`, default: `web` |
 | `SHOW_ONLY_BRANDS` | Filter to show specified brands. Comma separated, e.g.: `evga,zotac` |
@@ -58,6 +58,7 @@ Used with the `STORES` variable.
 | AMD | IT | `amd-it`|
 | AMD | UK | `amd-uk`|
 | AntOnline | US | `antonline`|
+| AO | UK | `ao`|
 | Argos | UK | `argos`|
 | Argos | IE | `argos-ie`|
 | Aria PC | UK | `aria`|
@@ -72,6 +73,7 @@ Used with the `STORES` variable.
 | Box | UK | `box`|
 | BPCTech | AU | `bpctech`|
 | BPM-Power | IT | `bpm-power`|
+| BT | UK | `bt`|
 | CanadaComputers | CA | `canadacomputers` |
 | Caseking | DE | `caseking`|
 | CCL | UK | `ccl`|
@@ -94,9 +96,9 @@ Used with the `STORES` variable.
 | El Corte Inglés | ES | `elcorteingles`|
 | Elkjop | NO | `elkjop`|
 | ePrice | IT | `eprice`|
+| Equippr | DE | `equippr`|
 | Euronics | IT | `euronics`|
 | Euronics | DE | `euronics-de`|
-| Equippr | DE | `equippr`|
 | Evatech | AU |  `evatech`|
 | EVGA | US | `evga`|
 | EVGA | EU | `evga-eu`|
@@ -109,14 +111,15 @@ Used with the `STORES` variable.
 | Gamestop | IE | `gamestop-ie`|
 | Gamestop | IT | `gamestop-it`|
 | Globaldata | PT | `globaldata`|
+| Hardware Planet | IT | | `hardware-planet` |
 | HarrisTechnology | AU |  `harristechnology`|
 | Harvey Normans | IE | `harveynorman-ie` |
-| Hardware Planet | IT | | `hardware-planet` |
 | iGame Computer | AU |  `igame-computer`|
 | John Lewis | UK | `johnlewis`|
 | Kabum | BR | `kabum`|
 | Komplett | NO | `komplett-no`|
 | Landmark Computers | AU |  `landmark-computers`|
+| Ldlc | FR |  `ldlc`|
 | Mediamarkt | DE | `mediamarkt`|
 | Medimax | DE | `medimax`|
 | Megekko | NL | `megekko`|
@@ -131,6 +134,7 @@ Used with the `STORES` variable.
 | Newegg | SG | `newegg-sg`|
 | Notebooksbilliger | DE |`notebooksbilliger`|
 | Novatech | UK | `novatech`|
+| Novo Atalho | PT | `novoatalho`|
 | Nvidia | EU/UK | [See below](#nvidia-store-reference) |
 | Office Depot | US | `officedepot`|
 | Ollo | IT | `ollo`|
@@ -161,6 +165,7 @@ Used with the `STORES` variable.
 | Storm Computers | AU |  `storm-computer`|
 | Target | US | `target`|
 | Tesco | IE | `tesco-ie`|
+| TopAchat | GR | `topachat`|
 | Toys R Us | US | `toysrus` |
 | Umart | AU | `umart`|
 | Unieuro | IT | `unieuro`|
@@ -171,7 +176,6 @@ Used with the `STORES` variable.
 | Wells Technology | AU |  `wellstechnology`|
 | Wipoid | ES | `wipoid`|
 | Zotac | US | `zotac`|
-| TopAchat | GR | `topachat`|
 
 ### Micro Center stores
 
@@ -214,7 +218,7 @@ Used with the `SHOW_ONLY_BRANDS` and `SHOW_ONLY_MODELS` variables.
 | `pny` | `dual fan`, `xlr8 epic x`, `xlr8 revel`, `xlr8 uprising` |
 | `sony` | `ps5 console`, `ps5 digital` |
 | `xfx` | `merc`, `amd reference` |
-| `zotac` | `amp holo`, `amp extreme holo`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc`, `twin edge oc white` |
+| `zotac` | `amp holo`, `amp extreme holo`, `amp white`, `trinity`, `trinity oc`, `twin edge`, `twin edge oc`, `twin edge oc white` |
 
 ## Supported series
 

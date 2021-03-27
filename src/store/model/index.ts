@@ -1,5 +1,6 @@
 import {config, defaultStoreData} from '../../config';
 import {AComPC} from './acompc';
+import {Ldlc} from './ldlc';
 import {Adorama} from './adorama';
 import {Akinformatica} from './akinformatica';
 import {Allneeds} from './allneeds';
@@ -21,6 +22,7 @@ import {AmdDe} from './amd-de';
 import {AmdIt} from './amd-it';
 import {AmdUk} from './amd-uk';
 import {AntOnline} from './antonline';
+import {AO} from './ao';
 import {Argos} from './argos';
 import {ArgosIE} from './argos-ie';
 import {Aria} from './aria';
@@ -35,6 +37,7 @@ import {BestBuyCa} from './bestbuy-ca';
 import {Box} from './box';
 import {Bpctech} from './bpctech';
 import {BpmPower} from './bpmpower';
+import {BT} from './bt';
 import {CanadaComputers} from './canadacomputers';
 import {Caseking} from './caseking';
 import {Ccl} from './ccl';
@@ -94,6 +97,7 @@ import {NeweggCa} from './newegg-ca';
 import {NeweggSg} from './newegg-sg';
 import {Notebooksbilliger} from './notebooksbilliger';
 import {Novatech} from './novatech';
+import {NovoAtalho} from './novoatalho';
 import {NvidiaDE} from './nvidia-de';
 import {NvidiaES} from './nvidia-es';
 import {NvidiaFR} from './nvidia-fr';
@@ -104,10 +108,10 @@ import {Otto} from './otto';
 import {Overclockers} from './overclockers';
 import {PBTech} from './pbtech';
 import {PCByte} from './pcbyte';
+import {Pccg} from './pccg';
 import {PCComponentes} from './pccomponentes';
 import {PCDiga} from './pcdiga';
 import {PCKing} from './pcking';
-import {Pccg} from './pccg';
 import {PlayStation} from './playstation';
 import {Pny} from './pny';
 import {PowerNO} from './power-no';
@@ -146,8 +150,8 @@ import {logger} from '../../logger';
 export const storeList = new Map([
   [AComPC.name, AComPC],
   [Adorama.name, Adorama],
-  [Allneeds.name, Allneeds],
   [Akinformatica.name, Akinformatica],
+  [Allneeds.name, Allneeds],
   [Alternate.name, Alternate],
   [AlternateNL.name, AlternateNL],
   [Amazon.name, Amazon],
@@ -156,16 +160,17 @@ export const storeList = new Map([
   [AmazonDeWarehouse.name, AmazonDeWarehouse],
   [AmazonEs.name, AmazonEs],
   [AmazonFr.name, AmazonFr],
-  [AmazonNl.name, AmazonNl],
-  [AmazonUk.name, AmazonUk],
-  [AmazonSg.name, AmazonSg],
   [AmazonIt.name, AmazonIt],
+  [AmazonNl.name, AmazonNl],
+  [AmazonSg.name, AmazonSg],
+  [AmazonUk.name, AmazonUk],
   [Amd.name, Amd],
   [AmdCa.name, AmdCa],
   [AmdDe.name, AmdDe],
   [AmdIt.name, AmdIt],
   [AmdUk.name, AmdUk],
   [AntOnline.name, AntOnline],
+  [AO.name, AO],
   [Argos.name, Argos],
   [ArgosIE.name, Argos],
   [Aria.name, Aria],
@@ -180,8 +185,9 @@ export const storeList = new Map([
   [Box.name, Box],
   [Bpctech.name, Bpctech],
   [BpmPower.name, BpmPower],
-  [Caseking.name, Caseking],
+  [BT.name, BT],
   [CanadaComputers.name, CanadaComputers],
+  [Caseking.name, Caseking],
   [Ccl.name, Ccl],
   [Centrecom.name, Centrecom],
   [Comet.name, Comet],
@@ -228,6 +234,7 @@ export const storeList = new Map([
   [Mediamarkt.name, Mediamarkt],
   [Medimax.name, Medimax],
   [Megekko.name, Megekko],
+  [Ldlc.name, Ldlc],
   [MemoryExpress.name, MemoryExpress],
   [MicroCenter.name, MicroCenter],
   [Mindfactory.name, Mindfactory],
@@ -239,6 +246,7 @@ export const storeList = new Map([
   [NeweggSg.name, NeweggSg],
   [Notebooksbilliger.name, Notebooksbilliger],
   [Novatech.name, Novatech],
+  [NovoAtalho.name, NovoAtalho],
   [NvidiaDE.name, NvidiaDE],
   [NvidiaES.name, NvidiaES],
   [NvidiaFR.name, NvidiaFR],
@@ -250,9 +258,9 @@ export const storeList = new Map([
   [PBTech.name, PBTech],
   [PCByte.name, PCByte],
   [Pccg.name, Pccg],
-  [PCKing.name, PCKing],
   [PCComponentes.name, PCComponentes],
   [PCDiga.name, PCDiga],
+  [PCKing.name, PCKing],
   [PlayStation.name, PlayStation],
   [Pny.name, Pny],
   [PowerNO.name, PowerNO],
@@ -266,8 +274,8 @@ export const storeList = new Map([
   [Scan.name, Scan],
   [Scorptec.name, Scorptec],
   [ShopTo.name, ShopTo],
-  [SmythsToysIE.name, SmythsToysIE],
   [SmythsToys.name, SmythsToys],
+  [SmythsToysIE.name, SmythsToysIE],
   [Spielegrotte.name, Spielegrotte],
   [StormComputers.name, StormComputers],
   [Target.name, Target],
