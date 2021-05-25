@@ -2,7 +2,6 @@ import {existsSync, readFileSync} from 'fs';
 import {banner} from './banner';
 import dotenv from 'dotenv';
 import path from 'path';
-import * as console from 'console';
 
 if (process.env.npm_config_conf) {
   if (
@@ -16,6 +15,8 @@ if (process.env.npm_config_conf) {
   }
 } else if (existsSync(path.resolve(__dirname, '../../dotenv'))) {
   dotenv.config({path: path.resolve(__dirname, '../../dotenv')});
+} else if (existsSync(path.resolve(__dirname, '../dotenv'))) {
+  dotenv.config({path: path.resolve(__dirname, '../dotenv')});
 } else {
   dotenv.config({path: path.resolve(__dirname, '../../.env')});
 }
@@ -199,6 +200,18 @@ const browser = {
   userAgent: '',
 };
 
+const captchaHandler = {
+  captureType: envOrString(process.env.CAPTCHA_HANDLER_CAPTURE_TYPE),
+  pollInterval: envOrNumber(process.env.CAPTCHA_HANDLER_POLL_INTERVAL, 5),
+  responseTimeout: envOrNumber(
+    process.env.CAPTCHA_HANDLER_RESPONSE_TIMEOUT,
+    300
+  ),
+  service: envOrString(process.env.CAPTCHA_HANDLER_SERVICE),
+  token: envOrString(process.env.CAPTCHA_HANDLER_TOKEN),
+  userId: envOrString(process.env.CAPTCHA_HANDLER_USER_ID),
+};
+
 const docker = envOrBoolean(process.env.DOCKER, false);
 
 const logLevel = envOrString(process.env.LOG_LEVEL, 'info');
@@ -223,6 +236,7 @@ const notifications = {
       3090: envOrArray(process.env.DISCORD_NOTIFY_GROUP_3090),
       'captcha-deterrent': [],
       darkhero: envOrArray(process.env.DISCORD_NOTIFY_GROUP_DARKHERO),
+      rx6700xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6700XT),
       rx6800: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800),
       rx6800xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6800XT),
       rx6900xt: envOrArray(process.env.DISCORD_NOTIFY_GROUP_RX6900XT),
@@ -248,6 +262,11 @@ const notifications = {
       envOrString(process.env.EMAIL_USERNAME)
     ),
     username: envOrString(process.env.EMAIL_USERNAME),
+  },
+  gotify: {
+    priority: envOrNumber(process.env.GOTIFY_PRIORITY),
+    token: envOrString(process.env.GOTIFY_TOKEN),
+    url: envOrString(process.env.GOTIFY_URL),
   },
   mqtt: {
     broker: envOrString(process.env.MQTT_BROKER_ADDRESS),
@@ -305,6 +324,7 @@ const notifications = {
     sound: envOrString(process.env.PUSHOVER_SOUND, 'pushover'),
     token: envOrString(process.env.PUSHOVER_TOKEN),
     username: envOrString(process.env.PUSHOVER_USER),
+    device: envOrString(process.env.PUSHOVER_DEVICE),
   },
   redis: {
     url: envOrString(process.env.REDIS_URL),
@@ -349,6 +369,10 @@ const notifications = {
     soundHref: envOrString(process.env.STREAMLABS_SOUND),
     duration: envOrNumber(process.env.STREAMLABS_DURATION),
   },
+  freemobile: {
+    id: envOrString(process.env.FREEMOBILE_ID),
+    apiKey: envOrString(process.env.FREEMOBILE_API_KEY),
+  },
 };
 
 const nvidia = {
@@ -389,6 +413,7 @@ const store = {
       3090: envOrNumber(process.env.MAX_PRICE_SERIES_3090),
       'captcha-deterrent': 0,
       darkhero: envOrNumber(process.env.MAX_PRICE_SERIES_DARKHERO),
+      rx6700xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6700XT),
       rx6800: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800),
       rx6800xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6800XT),
       rx6900xt: envOrNumber(process.env.MAX_PRICE_SERIES_RX6900XT),
@@ -419,6 +444,7 @@ const store = {
     '3070',
     '3080',
     '3090',
+    'rx6700xt',
     'rx6800',
     'rx6800xt',
     'rx6900xt',
@@ -467,6 +493,7 @@ export const defaultStoreData = {
 
 export const config = {
   browser,
+  captchaHandler,
   docker,
   logLevel,
   notifications,
